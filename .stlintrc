@@ -1,0 +1,8 @@
+{
+  "useMixinInsteadUnit": {
+    "conf": "always",
+    "mixin": "basis",
+    "unitType": "px"
+  },
+  "extraRules": "./rules"
+}

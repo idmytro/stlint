@@ -1,0 +1,24 @@
+{
+  "name": "stlint-v4fire",
+  "version": "1.0.0",
+  "description": "V4Fire Rules for V4Fire",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/V4Fire/stlint.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/V4Fire/stlint/issues"
+  },
+  "homepage": "https://github.com/V4Fire/stlint#readme",
+  "dependencies": {
+    "stlint": "^1.0.8",
+    "stylus": "^0.54.5"
+  }
+}
