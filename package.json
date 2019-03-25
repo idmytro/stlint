@@ -1,11 +1,11 @@
 {
   "name": "stlint-v4fire",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "V4Fire Rules for V4Fire",
   "main": "index.js",
   "scripts": {
     "newversion": "npm version patch --no-git-tag-version && npm run newversiongit && npm publish ./",
-    "newversiongit": "git add --all  && git commit -m \"New version $npm_package_version. Read more https://github.com/stylus/stlint/releases/tag/$npm_package_version \" && git tag $npm_package_version && git push --tags origin HEAD:master",
+    "newversiongit": "git add --all  && git commit -m \"New version $npm_package_version. Read more https://github.com/stylus/stlint/releases/tag/$npm_package_version \" && git tag $npm_package_version && git push --tags origin dev",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
