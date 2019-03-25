@@ -1,6 +1,6 @@
 {
   "name": "stlint-v4fire",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "V4Fire Rules for V4Fire",
   "main": "index.js",
   "scripts": {
@@ -13,8 +13,8 @@
     "url": "git+https://github.com/V4Fire/stlint.git"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Chupurnov Valeriy<chupurnov@gmail.com>",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/V4Fire/stlint/issues"
   },
