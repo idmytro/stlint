@@ -1,2 +1,2 @@
-# Набор правил для STLint для библиотеки V4FIre
-В пакете собраный правила которые используются в библиотеке V4Fire stylus файлах
+# A set of rules for STLint library V4FIre
+This package contains the rules that are used in the library of V4Fire stylus files
