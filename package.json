@@ -1,6 +1,6 @@
 {
   "name": "stlint-v4fire",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "V4Fire Rules for V4Fire",
   "main": "index.js",
   "scripts": {
@@ -20,7 +20,7 @@
   },
   "homepage": "https://github.com/V4Fire/stlint#readme",
   "dependencies": {
-    "stlint": "^1.0.8",
+    "stlint": "^1.0.28",
     "stylus": "^0.54.5"
   }
 }
