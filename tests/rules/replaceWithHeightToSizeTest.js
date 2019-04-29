@@ -4,7 +4,7 @@ const { ReplaceWithHeightToSize } = require("../../rules/replaceWithHeightToSize
 
 extendsRule(ReplaceWithHeightToSize);
 
-let wrongContentWithVar = '.tab\n\twidth basis(3)\n\theight basis(2)';
+let wrongContentWithVar = '.tab\n\twidth basis(3)\n\theight basis(2)\n\tpadding-bottom basis(0.75)';
 
 describe('Test replaceWithHeightToSize', () => {
 	it('Should throw error on width and height', () => {
@@ -42,13 +42,13 @@ describe('Test replaceWithHeightToSize', () => {
 				expect(response.passed).to.be.false;
 				expect(response.errors && response.errors.length).to.be.equal(1);
 
-				expect('.tab\n\tsize basis(3) basis(2)').to.be
+				expect('.tab\n\tsize basis(3) basis(2)\n\tpadding-bottom basis(0.75)').to.be
 					.equal(linter.fix('./tests/test.styl', new Content(wrongContentWithVar)));
 			});
 		});
 		describe('Width and height no in next line', () => {
 			it('Should not replace width and height but show error', () => {
-				wrongContentWithVar = '.tab\n\twidth basis(3)\n\tcolor #CCC\n\theight basis(2)';
+				wrongContentWithVar = '.tab\n\twidth basis(3)\n\tcolor #CCC\n\theight basis(2)\n\tpadding-bottom basis(0.75)';
 
 				const linter = new Linter({
 					rules: {
