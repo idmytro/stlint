@@ -26,12 +26,12 @@ function ReplaceWithHeightToSize() {
 		if (width && height) {
 			const
 				fix = Math.abs(width.lineno - height.lineno) === 1 ?
-					'size ' + width.value + (width.value.toString() === height.value.toString() ? '' : ' ' + height.value) + '\n' : null;
+					'size ' + width.value + (width.value.toString() === height.value.toString() ? '' : ' ' + height.value) : null;
 
 			this.msg('Need replace width and height to size',
 				width.lineno,
 				width.column,
-				height.column + height.line.line.length - 1,
+				height.line.line.length,
 				fix,
 				height.lineno);
 		}
