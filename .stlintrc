@@ -1,5 +1,6 @@
 {
   "rules": {
+    "replaceWithHeightToSize": true,
     "testRule": false,
     "useMixinInsteadUnit": {
       "enabled": true,

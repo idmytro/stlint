@@ -1,12 +1,12 @@
 {
   "name": "stlint-v4fire",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "V4Fire Rules for V4Fire",
   "main": "index.js",
   "scripts": {
-    "newversion": "npm version patch --no-git-tag-version && npm run newversiongit && npm publish ./",
+    "newversion": "npm test && npm version patch --no-git-tag-version && npm run newversiongit && npm publish ./",
     "newversiongit": "git add --all  && git commit -m \"New version $npm_package_version. Read more https://github.com/stylus/stlint/releases/tag/$npm_package_version \" && git tag $npm_package_version && git push --tags origin dev",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha tests/**/**.js"
   },
   "repository": {
     "type": "git",
@@ -20,7 +20,14 @@
   },
   "homepage": "https://github.com/V4Fire/stlint#readme",
   "dependencies": {
-    "stlint": "^1.0.28",
+    "chai": "^4.2.0",
+    "mocha": "^6.1.4",
+    "stlint": "^1.0.40",
     "stylus": "^0.54.5"
+  },
+  "mocha": {
+    "require": [
+      "tests/staff/bootstrap.js"
+    ]
   }
 }
