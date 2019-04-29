@@ -52,13 +52,27 @@ function AbsoluteShortcut() {
 
 				ordered.sort((a, b) => orderKeys.indexOf(a.key) - orderKeys.indexOf(b.key));
 
-				fix = ordered.reduce((res, prop) => {
-					if (prop.key !== 'position') {
-						res.push(prop.key + ' ' + prop.value);
-					}
+				let previous = null;
 
-					return res;
-				}, ['absolute']).join(' ');
+				const
+					pos = ordered.reduce((res, prop) => {
+						if (prop.key !== 'position') {
+							if (previous && previous.value.toString() !== prop.value.toString()) {
+								res.push(previous.value);
+							}
+
+							res.push(prop.key);
+
+							previous = prop;
+						}
+						return res;
+					}, ['absolute']);
+
+				if (previous) {
+					pos.push(previous.value);
+				}
+
+				fix = pos.join(' ');
 			}
 
 			this.msg(

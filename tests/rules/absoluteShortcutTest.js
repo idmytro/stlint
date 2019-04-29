@@ -42,7 +42,7 @@ describe('Test absoluteShortcut', () => {
 				expect(response.passed).to.be.false;
 				expect(response.errors && response.errors.length).to.be.equal(1);
 
-				expect('.tab\n\tabsolute top 10px right 10px left 20px').to.be
+				expect('.tab\n\tabsolute top right 10px left 20px').to.be
 					.equal(linter.fix('./tests/test.styl', new Content(wrongContent)));
 			});
 		});
