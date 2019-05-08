@@ -12,6 +12,10 @@
       "startGroupChecking": 6,
       "order": [
         [
+          "content"
+        ],
+
+        [
           "absolute",
           "fixed",
           "position",
@@ -23,7 +27,6 @@
         ],
 
         [
-          "content",
           "display",
 
           "flexbox",
