@@ -22,6 +22,7 @@ describe('Test AllowColorOnlyInC', () => {
 		);
 
 		expect(rule.errors.length).to.be.equal(1);
+		expect(rule.errors[0][2]).to.be.equal(2);
 	});
 	describe('Color inside C() mixin', () => {
 		it('Should not throw error', () => {
