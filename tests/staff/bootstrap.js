@@ -1,10 +1,8 @@
 const { Runner, Content, StylusParser, Rule } = require("stlint");
 
 const extendsRule = (rulesConstructor) => {
-	if (!(rulesConstructor.prototype instanceof Rule)) {
-		rulesConstructor.prototype = new Rule({ conf: 'always' });
-		rulesConstructor.prototype.constructor = rulesConstructor;
-	}
+	rulesConstructor.prototype = new Rule({ conf: 'always' });
+	rulesConstructor.prototype.constructor = rulesConstructor;
 };
 
 /**

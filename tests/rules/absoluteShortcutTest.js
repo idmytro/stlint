@@ -46,6 +46,7 @@ describe('Test absoluteShortcut', () => {
 					.equal(linter.fix('./tests/test.styl', new Content(wrongContent)));
 			});
 		});
+
 		describe('Position ans left,right,top,bottom no in next line', () => {
 			it('Should not replace Position but show error', () => {
 				wrongContent = '.tab\n\tposition absolute\n\tborder 1px solid #ccc\n\ttop 10px\n\tleft 20px\n\tright 10px';
