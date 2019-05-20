@@ -30,19 +30,22 @@
           "display",
 
           "flexbox",
+
+          "flex-flow",
+          "flex-direction",
+          "flex-wrap",
+          "justify-content",
+          "align-content",
+          "align-items",
+
+          "align-self",
           "flex",
           "flex-grow",
           "flex-shrink",
           "flex-basis",
-          "flex-direction",
           "order",
+
           "flex-order",
-          "flex-wrap",
-          "flex-flow",
-          "justify-content",
-          "align-self",
-          "align-items",
-          "align-content",
           "flex-pack",
           "flex-align",
 
