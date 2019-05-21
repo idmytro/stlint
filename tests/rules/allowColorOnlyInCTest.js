@@ -1,4 +1,3 @@
-const { Linter, Content } = require("stlint");
 const { expect } = require("chai");
 const { AllowColorOnlyInC } = require("../../rules/allowColorOnlyInC");
 
