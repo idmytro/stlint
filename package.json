@@ -1,6 +1,6 @@
 {
   "name": "stlint-v4fire",
-  "version": "1.0.15",
+  "version": "1.0.16",
   "description": "V4Fire Rules for V4Fire",
   "main": "index.js",
   "scripts": {
@@ -22,7 +22,7 @@
   "dependencies": {
     "chai": "^4.2.0",
     "mocha": "^6.1.4",
-    "stlint": "^1.0.40",
+    "stlint": "^1.0.47",
     "stylus": "^0.54.5"
   },
   "mocha": {

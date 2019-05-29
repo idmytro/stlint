@@ -1,5 +1,8 @@
 {
-  "rules": {
+  "preprocessors": [
+		"preprocessors/addLastLineInExtendMixin.js"
+	],
+	"rules": {
     "replaceWithHeightToSize": true,
     "testRule": false,
 
