@@ -23,6 +23,7 @@
           "absolute",
           "position",
           "z-index",
+          "zIndex",
           "top",
           "right",
           "bottom",
