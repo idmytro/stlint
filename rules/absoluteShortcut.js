@@ -25,14 +25,14 @@ function AbsoluteShortcut() {
 			if (child instanceof Property || child instanceof Value) {
 				if (orderKeys.includes(child.key)) {
 					sizes.push(child);
-				} else if (child.key === 'position' && child.value.toString() === 'absolute') {
+				} else if (child.key === 'position' && (['absolute', 'fixed'].includes(child.value.toString()))) {
 					hasAbsolute = child;
 					sizes.push(child);
 				}
 			}
 		});
 
-		if (hasAbsolute) {
+		if (hasAbsolute && sizes.length > 1) {
 			sizes.sort((a, b) => a.lineno - b.lineno);
 
 			let canFix = true;

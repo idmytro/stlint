@@ -4,7 +4,9 @@ const { AbsoluteShortcut } = require("../../rules/absoluteShortcut");
 
 extendsRule(AbsoluteShortcut);
 
-let wrongContent = '.tab\n\tposition absolute\n\ttop 10px\n\tleft 20px\n\tright 10px';
+let
+	wrongContent = '.tab\n\tposition absolute\n\ttop 10px\n\tleft 20px\n\tright 10px',
+	rightContent = '.tab\n\tposition absolute\n\tcolor red';
 
 describe('Test absoluteShortcut', () => {
 	it('Should throw error position absolute', () => {
@@ -45,9 +47,31 @@ describe('Test absoluteShortcut', () => {
 				expect('.tab\n\tabsolute top right 10px left 20px').to.be
 					.equal(linter.fix('./tests/test.styl', new Content(wrongContent)));
 			});
+
+			describe('There are not (left|right|top|bottom) properties after position absolute ', () => {
+				it('Should not replace position absolute to absolute', () => {
+					const linter = new Linter({
+						rules: {
+							absoluteShortcut: {
+								conf: "always"
+							}
+						},
+						grep: 'absoluteShortcut',
+						reporter: 'silent',
+						fix: true
+					});
+
+					linter.lint('./tests/test.styl', rightContent);
+					linter.display(false);
+
+					const response = linter.reporter.response;
+
+					expect(response.passed).to.be.true;
+				});
+			});
 		});
 
-		describe('Position ans left,right,top,bottom no in next line', () => {
+		describe('Position and left,right,top,bottom no in next line', () => {
 			it('Should not replace Position but show error', () => {
 				wrongContent = '.tab\n\tposition absolute\n\tborder 1px solid #ccc\n\ttop 10px\n\tleft 20px\n\tright 10px';
 
