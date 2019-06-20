@@ -17,7 +17,7 @@ function AbsoluteShortcut() {
 	 * @param node
 	 */
 	this.checkNode = (node) => {
-		const orderKeys = this.conf.orderKeys || AbsoluteKeys;
+		const orderKeys = this.state.orderKeys || AbsoluteKeys;
 
 		let
 			hasAbsolute = false,
