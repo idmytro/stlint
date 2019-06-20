@@ -8,6 +8,8 @@ const AbsoluteKeys = [
 ];
 
 function AbsoluteShortcut() {
+	const cssRules = ['absolute', 'fixed'];
+
 	this.nodesFilter = ['block'];
 
 	/**
@@ -19,13 +21,15 @@ function AbsoluteShortcut() {
 
 		let
 			hasAbsolute = false,
+			absoluteCssRuleKey = 'absolute',
 			sizes = [];
 
 		node.nodes.forEach((child) => {
 			if (child instanceof Property || child instanceof Value) {
 				if (orderKeys.includes(child.key)) {
 					sizes.push(child);
-				} else if (child.key === 'position' && (['absolute', 'fixed'].includes(child.value.toString()))) {
+				} else if (child.key.toLowerCase() === 'position' && (cssRules.includes(child.value.toString().toLowerCase()))) {
+					absoluteCssRuleKey = child.value.toString().toLowerCase();
 					hasAbsolute = child;
 					sizes.push(child);
 				}
@@ -65,8 +69,9 @@ function AbsoluteShortcut() {
 
 							previous = prop;
 						}
+
 						return res;
-					}, ['absolute']);
+					}, [absoluteCssRuleKey]);
 
 				if (previous) {
 					pos.push(previous.value);
@@ -76,7 +81,7 @@ function AbsoluteShortcut() {
 			}
 
 			this.msg(
-				'Replace position:absolute to absolute',
+				'Replace position:' + absoluteCssRuleKey + ' to ' + absoluteCssRuleKey,
 				sizes[0].lineno,
 				sizes[0].column,
 				sizes[sizes.length - 1].line.line.length,
