@@ -1,12 +1,7 @@
 {
   "rules": {
     "testRule": false,
-    "useMixinInsteadUnit": {
-      "enabled": true,
-      "conf": "always",
-      "mixin": "basis",
-      "unitType": "px"
-    },
+    "useMixinInsteadUnit": false,
     "sortOrder": {
       "conf": "grouped",
       "startGroupChecking": 6,
