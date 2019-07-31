@@ -1,6 +1,6 @@
 const  { Property, Value } = require('stlint').ast;
 
-function ReplaceWithHeightToSize() {
+function ReplaceWidthHeightToSize() {
 	this.nodesFilter = ['block'];
 
 	/**
@@ -38,4 +38,4 @@ function ReplaceWithHeightToSize() {
 	};
 }
 
-module.exports.ReplaceWithHeightToSize = ReplaceWithHeightToSize;
+module.exports.ReplaceWidthHeightToSize = ReplaceWidthHeightToSize;

@@ -1,26 +1,22 @@
 {
-  "preprocessors": [
-		"preprocessors/addLastLineInExtendMixin.js"
-	],
 	"rules": {
-    "replaceWithHeightToSize": true,
+    "replaceWidthHeightToSize": true,
     "testRule": false,
-
 		"allowColorOnlyInC": true,
 
-		"useMixinInsteadUnit": {
-      "enabled": true,
-      "conf": "always",
-      "mixin": "basis",
-      "unitType": "px",
-      "allowOneUnit": true
-    },
-    "sortOrder": {
+		"useMixinInsteadUnit": false,
+
+		"sortOrder": {
       "conf": "grouped",
       "startGroupChecking": 6,
       "order": [
         [
+          "content"
+        ],
+
+        [
           "absolute",
+          "fixed",
           "position",
           "z-index",
           "zIndex",
@@ -31,24 +27,26 @@
         ],
 
         [
-          "content",
           "display",
 
           "g-grid",
           "flexbox",
+
+          "flex-flow",
+          "flex-direction",
+          "flex-wrap",
+          "justify-content",
+          "align-content",
+          "align-items",
+
+          "align-self",
           "flex",
           "flex-grow",
           "flex-shrink",
           "flex-basis",
-          "flex-direction",
           "order",
+
           "flex-order",
-          "flex-wrap",
-          "flex-flow",
-          "justify-content",
-          "align-self",
-          "align-items",
-          "align-content",
           "flex-pack",
           "flex-align",
 
