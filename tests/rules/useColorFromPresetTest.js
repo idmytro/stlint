@@ -3,7 +3,7 @@ const { useColorFromPreset } = require("../../rules/useColorFromPreset");
 
 let
 	wrongContent = '$p = {\n' +
-		'\tcolor: c(#CCCCCC)\n' +
+		'\tcolor:c(#F5F5F5)\n' +
 		'}\n' +
 		'.tab\n\tcolor $p.color';
 
@@ -21,6 +21,8 @@ describe('Test useColorFromPreset', () => {
 			wrongContent,
 			rule
 		);
+
+		console.log(rule.errors);
 
 		expect(rule.errors.length).to.be.equal(1);
 	});

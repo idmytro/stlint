@@ -96,7 +96,7 @@ function useColorFromPreset() {
 				replace = getKeyForColor(color);
 
 			if (replace) {
-				this.msg(`Use instead raw color ${color} mixin ${replace}`, node.line.lineno, node.column, node.toString().length, replace);
+				this.msg(`Use instead raw color ${color} mixin ${replace}`, node.line.lineno, node.column, node.column + node.toString().length, replace);
 			}
 		}
 	};
