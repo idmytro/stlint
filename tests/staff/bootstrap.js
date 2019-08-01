@@ -1,8 +1,10 @@
-const { Runner, Content, StylusParser, Rule } = require("stlint");
+const { Runner, Content, StylusParser, Rule, Linter } = require("stlint");
 
 const extendsRule = (rulesConstructor) => {
+	const linter = new Linter();
 	rulesConstructor.prototype = new Rule({ conf: 'always' });
 	rulesConstructor.prototype.constructor = rulesConstructor;
+	rulesConstructor.prototype.setConfig(linter.config);
 };
 
 /**

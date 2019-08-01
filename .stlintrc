@@ -5,6 +5,7 @@
 		"allowColorOnlyInC": true,
 
 		"useMixinInsteadUnit": false,
+		"useColorFromPreset": true,
 
 		"sortOrder": {
       "conf": "grouped",

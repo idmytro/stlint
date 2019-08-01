@@ -1,6 +1,6 @@
 {
   "name": "stlint-v4fire",
-  "version": "1.0.22",
+  "version": "1.0.23",
   "description": "V4Fire Rules for V4Fire",
   "main": "index.js",
   "scripts": {
@@ -20,9 +20,12 @@
   },
   "homepage": "https://github.com/V4Fire/stlint#readme",
   "dependencies": {
+    "@edadeal/core": "git+https://docker:NobenLojElt5@git.edadev.ru/frontend/core.git#v3",
+    "@v4fire/client": "^3.0.0-beta.118",
+    "@v4fire/core": "^3.0.0-beta.62",
     "chai": "^4.2.0",
-    "mocha": "^6.1.4",
-    "stlint": "^1.0.47",
+    "mocha": "^6.2.0",
+    "stlint": "^1.0.57",
     "stylus": "^0.54.5"
   },
   "mocha": {
