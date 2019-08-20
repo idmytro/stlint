@@ -19,11 +19,11 @@
     "url": "https://github.com/V4Fire/stlint/issues"
   },
   "homepage": "https://github.com/V4Fire/stlint#readme",
-  "dependencies": {
-    "@v4fire/client": "^3.0.0-beta.118",
-    "@v4fire/core": "^3.0.0-beta.62",
+  "devDependencies": {
     "chai": "^4.2.0",
-    "mocha": "^6.2.0",
+    "mocha": "^6.2.0"
+  },
+  "dependencies": {
     "stlint": "^1.0.57",
     "stylus": "^0.54.5"
   },
